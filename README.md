@@ -8,3 +8,8 @@ Simple deployment of Any Google API with Oauth using Node, Express, EJS &amp; Do
 4. Choose an API - https://developers.google.com/apis-explorer - this example uses Youtube API
 5. Modify API call in index.js in the root folder (e.g. : https://developers.google.com/youtube/v3/docs/?apix=true for youtube)
 6. Have fun! :)
+
+
+<img src="https://raw.githubusercontent.com/hydroweaver/yt-oauth-gapi-demo/master/land.png" width="250">
+<img src="https://raw.githubusercontent.com/hydroweaver/yt-oauth-gapi-demo/master/redirect%20yt%20data.png" width="250">
+
