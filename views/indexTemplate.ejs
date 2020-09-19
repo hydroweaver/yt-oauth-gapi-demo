@@ -1,0 +1,75 @@
+<!DOCTYPE HTML>
+<html>
+	<head>
+		<title>API Explorer</title>
+		<!-- https://favicon.io/favicon-generator/ -->
+		<!-- <link rel="shortcut icon" href="favicon.ico" type="image/x-icon"> -->
+		<link rel="icon" href="favicon.png">	
+		<style>
+				div {
+					color: white;
+					font-family: "Trebuchet MS";
+					text-align: center;
+				} 
+	
+				p {
+					margin: 10px 10px 10px 10px;
+					font-size: 30px;
+					color: rgb(215, 58, 50);
+					font-family: "Trebuchet MS";
+					text-align: center;
+				} 
+	
+				.mainimg{
+					display: block;
+					  margin-left: auto;
+					  margin-right: auto;
+					  width: 125px;
+					height: 125px;
+				}
+	
+				.loader {
+					border: 16px solid #f3f3f3; /* Light grey */
+					border-top: 16px solid #3498db; /* Blue */
+					border-radius: 50%;
+					width: 40px;
+					height: 40px;
+					animation: spin 2s linear infinite;
+					/* //Dont know how this centers the loader! */
+					margin:auto; 
+				}
+	
+				.inputText {
+					border-radius: 3px 3px 3px 3px;
+					width: 200px;
+					height: 20px;
+				}
+	
+				.buttonclass {
+					color: #e3f2fd;
+					border-color: #1e88e5;
+					background: linear-gradient(to bottom, #64b5f6 0%, #42a5f5 100%);
+					box-shadow: inset 0 1px #bbdefb, 0 1px 2px rgba(0, 0, 0, 0.2);
+				}
+		
+				@keyframes spin {
+					0% { transform: rotate(0deg); }
+					100% { transform: rotate(360deg); }
+				}
+			</style>
+	</head>
+	<body>
+		<img class = "mainimg" src="api.png">
+		<p>Hooked</p>
+		<div class="buttonDiv">
+			<button class = "buttonclass" id = "authAndLoadButton">Sign In with Google</button>
+		</div>
+	</body>
+		<script>
+			// https://stackoverflow.com/questions/58453723/getting-aditional-amp-value-after-ejs-template-complitaltion
+			let authlink = '<%- oauthurl %>';
+			document.getElementById("authAndLoadButton").onclick = function(){
+				window.open(authlink,"_self");
+			}
+		</script>
+</html>

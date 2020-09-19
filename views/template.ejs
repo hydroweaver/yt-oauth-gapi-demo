@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <style>
+            body {
+                background-color: rgb(248, 161, 47);
+            }
+
+            h1 {
+				font-size: 50px;
+				color: white;
+            	font-family: "Trebuchet MS", Helvetica, sans-serif;
+				text-align: center;
+            }
+
+            div{
+                text-align:center;
+                display:block;
+            }
+
+        </style>
+        <title>EJS</title>
+        <script>
+            const state = {'page_id': 1}
+            const title = ''
+            const url =  'user.html' 
+            history.pushState(state, title, url)
+            //can clear history with 
+                // for(var i = 0; i < history.length; i++){
+                //     history.pushState({},'');
+                // };
+        </script>
+    </head>
+    <body>
+        <h1><%= data.name %></h1>
+        <div>
+            <img class="centerImage" src="<%= data.pic %>">
+        </div>
+    </body>
+</html>
